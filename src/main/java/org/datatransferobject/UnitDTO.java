@@ -81,4 +81,28 @@ public class UnitDTO{
     public float getY() {
         return Y;
     }
+
+    public void setPreviousX(int previousX) {
+        PreviousX = previousX;
+    }
+
+    public void setPreviousY(int previousY) {
+        PreviousY = previousY;
+    }
+
+    public void setNextX(int nextX) {
+        NextX = nextX;
+    }
+
+    public void setNextY(int nextY) {
+        NextY = nextY;
+    }
+
+    public void setX(float x) {
+        X = x;
+    }
+
+    public void setY(float y) {
+        Y = y;
+    }
 }
