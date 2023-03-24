@@ -1,5 +1,4 @@
-package DataTransferObjects;
-
+package org.datatransferobject;
 public class UnitDTO{
     private float speed;
     private float health;

@@ -1,5 +1,4 @@
-package DataTransferObjects;
-
+package org.datatransferobject;
 public class TowerDTO {
     protected float damage;
     protected int price;
@@ -35,4 +34,3 @@ public class TowerDTO {
         return attackTime;
     }
 }
-

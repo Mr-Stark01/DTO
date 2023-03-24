@@ -1,4 +1,4 @@
-package DataTransferObjects;
+package org.datatransferobject;
 
 
 public class PlayerDTO {
