@@ -105,4 +105,12 @@ public class UnitDTO{
     public void setY(float y) {
         Y = y;
     }
+
+    public void setDeltaX(float deltaX) {
+        this.deltaX = deltaX;
+    }
+
+    public void setDeltaY(float deltaY) {
+        this.deltaY = deltaY;
+    }
 }
