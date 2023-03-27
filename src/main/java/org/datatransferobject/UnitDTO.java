@@ -32,6 +32,10 @@ public class UnitDTO{
         this.unitClass = unitClass;
     }
 
+    public String getUnitClass() {
+        return unitClass;
+    }
+
     public float getSpeed() {
         return speed;
     }
