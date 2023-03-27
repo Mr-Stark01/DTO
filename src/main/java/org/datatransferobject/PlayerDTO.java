@@ -11,5 +11,21 @@ public class PlayerDTO {
         this.positionY = positionY;
         this.health = health;
     }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public float getHealth() {
+        return health;
+    }
 }
 
