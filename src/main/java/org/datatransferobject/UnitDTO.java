@@ -14,8 +14,9 @@ public class UnitDTO{
     private float X;
     private float Y;
     private String unitClass;
+    private int id;
 
-    public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, int nextX, int nextY, float deltaX, float deltaY, float distance, float x, float y, String unitClass) {
+    public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, int nextX, int nextY, float deltaX, float deltaY, float distance, float x, float y, String unitClass,int id) {
         this.speed = speed;
         this.health = health;
         this.damage = damage;
@@ -30,10 +31,19 @@ public class UnitDTO{
         X = x;
         Y = y;
         this.unitClass = unitClass;
+        this.id=id;
     }
 
     public String getUnitClass() {
         return unitClass;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public float getSpeed() {
