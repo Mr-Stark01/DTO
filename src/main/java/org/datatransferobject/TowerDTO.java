@@ -5,6 +5,7 @@ public class TowerDTO {
     protected int range;
     protected UnitDTO target;
     protected float attackTime;
+    protected int X,Y;
 
     public TowerDTO(float damage, int price, int range, UnitDTO target, float attackTime) {
         this.damage = damage;
@@ -12,6 +13,22 @@ public class TowerDTO {
         this.range = range;
         this.target = target;
         this.attackTime = attackTime;
+    }
+
+    public int getX() {
+        return X;
+    }
+
+    public void setX(int x) {
+        X = x;
+    }
+
+    public int getY() {
+        return Y;
+    }
+
+    public void setY(int y) {
+        Y = y;
     }
 
     public float getDamage() {
