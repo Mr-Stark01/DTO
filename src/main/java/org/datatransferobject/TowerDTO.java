@@ -6,6 +6,7 @@ public class TowerDTO {
     protected UnitDTO target;
     protected float attackTime;
     protected int X,Y;
+    protected long lastTimeOfAttack;
 
     public TowerDTO(float damage, int price, int range, UnitDTO target, float attackTime) {
         this.damage = damage;
@@ -13,6 +14,14 @@ public class TowerDTO {
         this.range = range;
         this.target = target;
         this.attackTime = attackTime;
+    }
+
+    public long getLastTimeOfAttack() {
+        return lastTimeOfAttack;
+    }
+
+    public void setLastTimeOfAttack(long lastTimeOfAttack) {
+        this.lastTimeOfAttack = lastTimeOfAttack;
     }
 
     public void setTarget(UnitDTO target) {
