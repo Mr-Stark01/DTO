@@ -36,6 +36,10 @@ public class DTO implements Serializable {
         return towerDTOs;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public PlayerDTO getPlayerDTO() {
         return playerDTO;
     }
