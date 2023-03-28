@@ -15,6 +15,10 @@ public class TowerDTO {
         this.attackTime = attackTime;
     }
 
+    public void setTarget(UnitDTO target) {
+        this.target = target;
+    }
+
     public int getX() {
         return X;
     }
