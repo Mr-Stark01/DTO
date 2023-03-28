@@ -50,6 +50,10 @@ public class UnitDTO{
         return speed;
     }
 
+    public void setHealth(float health) {
+        this.health = health;
+    }
+
     public float getHealth() {
         return health;
     }
