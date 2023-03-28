@@ -10,13 +10,18 @@ public class DTO implements Serializable {
     private PlayerDTO playerDTO;
     private Date dateOfCreation;
     private boolean checked;
+    private int id;
 
-    public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO){
+    public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id){
         this.unitDTOs=unitDTOs;
         this.towerDTOs=towerDTOs;
         this.playerDTO=playerDTO;
-
+        this.id=id;
         dateOfCreation = new Date();
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void updateDate(){
@@ -27,7 +32,7 @@ public class DTO implements Serializable {
         return unitDTOs;
     }
 
-    public List<TowerDTO> getTowersDTOs() {
+    public List<TowerDTO> getTowerDTOs() {
         return towerDTOs;
     }
 
