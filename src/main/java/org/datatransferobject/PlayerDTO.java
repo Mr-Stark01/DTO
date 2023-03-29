@@ -1,7 +1,9 @@
 package org.datatransferobject;
 
 
-public class PlayerDTO {
+import java.io.Serializable;
+
+public class PlayerDTO implements Serializable {
     private int money;
     private int positionX,positionY;
     private float health;

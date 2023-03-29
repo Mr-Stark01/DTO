@@ -1,5 +1,8 @@
 package org.datatransferobject;
-public class TowerDTO {
+
+import java.io.Serializable;
+
+public class TowerDTO implements Serializable {
     protected float damage;
     protected int price;
     protected int range;

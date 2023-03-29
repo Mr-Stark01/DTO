@@ -1,5 +1,8 @@
 package org.datatransferobject;
-public class UnitDTO{
+
+import java.io.Serializable;
+
+public class UnitDTO implements Serializable {
     private float speed;
     private float health;
     private float damage;
