@@ -21,6 +21,7 @@ public class UnitDTO implements Serializable {
     private float Y;
     private String unitClass;
     private int id;
+    private long lastStep;
     private ArrayList<Integer> nextXCoordinates;
     private ArrayList<Integer> nextYCoordinates;
 
@@ -44,6 +45,14 @@ public class UnitDTO implements Serializable {
         this.id=id;
         nextXCoordinates = new ArrayList<>(nextXCoordinates);
         nextYCoordinates = new ArrayList<>(nextYCoordinates);
+    }
+
+    public long getLastStep() {
+        return lastStep;
+    }
+
+    public void setLastStep(long lastStep) {
+        this.lastStep = lastStep;
     }
 
     public String getUnitClass() {
@@ -86,12 +95,12 @@ public class UnitDTO implements Serializable {
         return PreviousY;
     }
 
-    public int getNextX() {
-        return nextXCoordinates.get(0);
+    public ArrayList<Integer> getNextX() {
+        return nextXCoordinates;
     }
 
-    public int getNextY() {
-        return nextYCoordinates.get(0);
+    public ArrayList<Integer>  getNextY() {
+        return nextYCoordinates;
     }
 
     public float getDeltaX() {
@@ -111,37 +120,12 @@ public class UnitDTO implements Serializable {
     public float getY() {
         return Y;
     }
-
     public void setPreviousX(int previousX) {
         PreviousX = previousX;
     }
 
     public void setPreviousY(int previousY) {
         PreviousY = previousY;
-    }
-
-    public boolean isNextEmpty(){
-        return nextXCoordinates.isEmpty();
-    }
-    public void setNextX(int nextX) {
-        nextXCoordinates.add(nextX);
-    }
-
-    public void setNextY(int nextY) {
-        nextYCoordinates.add(nextY);
-    }
-    public int getLastCalculatedXPoint(){
-        return nextXCoordinates.get(nextXCoordinates.size());
-    }
-    public int get1ToLastCalculatedXPoint(){
-        return nextXCoordinates.get(nextXCoordinates.size()-1);
-    }
-    public int get1ToLastCalculatedYPoint(){
-        return nextYCoordinates.get(nextYCoordinates.size()-1);
-    }
-
-    public int getLastCalculatedYPoint(){
-        return nextYCoordinates.get(nextYCoordinates.size());
     }
 
     public void setX(float x) {
