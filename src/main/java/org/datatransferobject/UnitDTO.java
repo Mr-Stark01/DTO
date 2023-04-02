@@ -1,6 +1,9 @@
 package org.datatransferobject;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class UnitDTO implements Serializable {
     private float speed;
@@ -18,8 +21,12 @@ public class UnitDTO implements Serializable {
     private float Y;
     private String unitClass;
     private int id;
+    private ArrayList<Integer> nextXCoordinates;
+    private ArrayList<Integer> nextYCoordinates;
 
-    public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, int nextX, int nextY, float deltaX, float deltaY, float distance, float x, float y, String unitClass,int id) {
+    public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, int nextX,
+                   int nextY, float deltaX, float deltaY, float distance, float x,
+                   float y, String unitClass,int id,ArrayList<Integer> nextXCoordinates,ArrayList<Integer> nextYCoordinates) {
         this.speed = speed;
         this.health = health;
         this.damage = damage;
@@ -35,6 +42,8 @@ public class UnitDTO implements Serializable {
         Y = y;
         this.unitClass = unitClass;
         this.id=id;
+        nextXCoordinates = new ArrayList<>(nextXCoordinates);
+        nextYCoordinates = new ArrayList<>(nextYCoordinates);
     }
 
     public String getUnitClass() {
@@ -78,11 +87,11 @@ public class UnitDTO implements Serializable {
     }
 
     public int getNextX() {
-        return NextX;
+        return nextXCoordinates.get(0);
     }
 
     public int getNextY() {
-        return NextY;
+        return nextYCoordinates.get(0);
     }
 
     public float getDeltaX() {
@@ -111,12 +120,28 @@ public class UnitDTO implements Serializable {
         PreviousY = previousY;
     }
 
+    public boolean isNextEmpty(){
+        return nextXCoordinates.isEmpty();
+    }
     public void setNextX(int nextX) {
-        NextX = nextX;
+        nextXCoordinates.add(nextX);
     }
 
     public void setNextY(int nextY) {
-        NextY = nextY;
+        nextYCoordinates.add(nextY);
+    }
+    public int getLastCalculatedXPoint(){
+        return nextXCoordinates.get(nextXCoordinates.size());
+    }
+    public int get1ToLastCalculatedXPoint(){
+        return nextXCoordinates.get(nextXCoordinates.size()-1);
+    }
+    public int get1ToLastCalculatedYPoint(){
+        return nextYCoordinates.get(nextYCoordinates.size()-1);
+    }
+
+    public int getLastCalculatedYPoint(){
+        return nextYCoordinates.get(nextYCoordinates.size());
     }
 
     public void setX(float x) {
