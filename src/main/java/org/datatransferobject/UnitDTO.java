@@ -12,8 +12,6 @@ public class UnitDTO implements Serializable {
     private int price;
     private int PreviousX;
     private int PreviousY;
-    private int NextX;
-    private int NextY;
     private float deltaX;
     private float deltaY;
     private float distance;
@@ -25,8 +23,7 @@ public class UnitDTO implements Serializable {
     private ArrayList<Integer> nextXCoordinates;
     private ArrayList<Integer> nextYCoordinates;
 
-    public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, int nextX,
-                   int nextY, float deltaX, float deltaY, float distance, float x,
+    public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, float deltaX, float deltaY, float distance, float x,
                    float y, String unitClass,int id,ArrayList<Integer> nextXCoordinates,ArrayList<Integer> nextYCoordinates) {
         this.speed = speed;
         this.health = health;
@@ -34,8 +31,6 @@ public class UnitDTO implements Serializable {
         this.price = price;
         PreviousX = previousX;
         PreviousY = previousY;
-        NextX = nextX;
-        NextY = nextY;
         this.deltaX = deltaX;
         this.deltaY = deltaY;
         this.distance = distance;
