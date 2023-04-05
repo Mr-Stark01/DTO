@@ -1,9 +1,7 @@
 package org.datatransferobject;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.List;
 
 public class UnitDTO implements Serializable {
     private float speed;
@@ -20,11 +18,11 @@ public class UnitDTO implements Serializable {
     private String unitClass;
     private int id;
     private long lastStep;
-    private ArrayList<Integer> nextXCoordinates;
-    private ArrayList<Integer> nextYCoordinates;
+    private List<Integer> nextXCoordinates;
+    private List<Integer> nextYCoordinates;
 
     public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, float deltaX, float deltaY, float distance, float x,
-                   float y, String unitClass,int id,ArrayList<Integer> nextXCoordinates,ArrayList<Integer> nextYCoordinates) {
+                   float y, String unitClass,int id,List<Integer> nextXCoordinates,List<Integer> nextYCoordinates) {
         this.speed = speed;
         this.health = health;
         this.damage = damage;
@@ -38,8 +36,8 @@ public class UnitDTO implements Serializable {
         Y = y;
         this.unitClass = unitClass;
         this.id=id;
-        nextXCoordinates = new ArrayList<>(nextXCoordinates);
-        nextYCoordinates = new ArrayList<>(nextYCoordinates);
+        this.nextXCoordinates = nextXCoordinates;
+        this.nextYCoordinates = nextYCoordinates;
     }
 
     public long getLastStep() {
@@ -90,11 +88,11 @@ public class UnitDTO implements Serializable {
         return PreviousY;
     }
 
-    public ArrayList<Integer> getNextX() {
+    public List<Integer> getNextX() {
         return nextXCoordinates;
     }
 
-    public ArrayList<Integer>  getNextY() {
+    public List<Integer>  getNextY() {
         return nextYCoordinates;
     }
 
