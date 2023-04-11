@@ -14,7 +14,7 @@ public class TowerDTO implements Serializable {
     protected float deltaSum;
     protected String towerClass;
 
-    public TowerDTO(float damage, int price, int range, UnitDTO target, float attackTime,float deltaSum,int id) {
+    public TowerDTO(float damage, int price, int range, UnitDTO target, float attackTime,float deltaSum,int id,String towerClass) {
         this.damage = damage;
         this.price = price;
         this.range = range;
@@ -22,6 +22,7 @@ public class TowerDTO implements Serializable {
         this.attackTime = attackTime;
         this.deltaSum = deltaSum;
         this.id = id;
+        this.towerClass=towerClass;
     }
 
     public String getTowerClass() {
