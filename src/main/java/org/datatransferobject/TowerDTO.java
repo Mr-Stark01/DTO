@@ -24,6 +24,7 @@ public class TowerDTO implements Serializable {
         this.attackTime = attackTime;
         this.deltaSum = deltaSum;
         this.id = id;
+        this.towerClass=towerClass;
     }
 
     public String getTowerClass() {
