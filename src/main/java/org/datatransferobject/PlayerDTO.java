@@ -29,5 +29,21 @@ public class PlayerDTO implements Serializable {
     public float getHealth() {
         return health;
     }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public void setHealth(float health) {
+        this.health = health;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
 }
 
