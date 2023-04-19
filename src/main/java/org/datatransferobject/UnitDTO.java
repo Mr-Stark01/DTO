@@ -136,4 +136,26 @@ public class UnitDTO implements Serializable {
     public void setDeltaY(float deltaY) {
         this.deltaY = deltaY;
     }
+
+    @Override
+    public String toString() {
+        return "UnitDTO{" +
+                "speed=" + speed +
+                ", health=" + health +
+                ", damage=" + damage +
+                ", price=" + price +
+                ", PreviousX=" + PreviousX +
+                ", PreviousY=" + PreviousY +
+                ", deltaX=" + deltaX +
+                ", deltaY=" + deltaY +
+                ", distance=" + distance +
+                ", X=" + X +
+                ", Y=" + Y +
+                ", unitClass='" + unitClass + '\'' +
+                ", id=" + id +
+                ", lastStep=" + lastStep +
+                ", nextXCoordinates=" + nextXCoordinates +
+                ", nextYCoordinates=" + nextYCoordinates +
+                '}';
+    }
 }

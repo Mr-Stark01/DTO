@@ -55,4 +55,16 @@ public class DTO implements Serializable {
     public void setChecked(boolean checked) {
         this.checked = checked;
     }
+
+    @Override
+    public String toString() {
+        return "DTO{" +
+                "unitDTOs=" + unitDTOs +
+                ", towerDTOs=" + towerDTOs +
+                ", playerDTO=" + playerDTO +
+                ", dateOfCreation=" + dateOfCreation +
+                ", checked=" + checked +
+                ", id=" + id +
+                '}';
+    }
 }

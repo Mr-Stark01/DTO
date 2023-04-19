@@ -98,4 +98,21 @@ public class TowerDTO implements Serializable {
     public float getAttackTime() {
         return attackTime;
     }
+
+    @Override
+    public String toString() {
+        return "TowerDTO{" +
+                "damage=" + damage +
+                ", price=" + price +
+                ", range=" + range +
+                ", target=" + target +
+                ", attackTime=" + attackTime +
+                ", X=" + X +
+                ", Y=" + Y +
+                ", lastTimeOfAttack=" + lastTimeOfAttack +
+                ", id=" + id +
+                ", deltaSum=" + deltaSum +
+                ", towerClass='" + towerClass + '\'' +
+                '}';
+    }
 }

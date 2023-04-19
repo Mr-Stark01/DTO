@@ -45,5 +45,15 @@ public class PlayerDTO implements Serializable {
     public void setPositionY(int positionY) {
         this.positionY = positionY;
     }
+
+    @Override
+    public String toString() {
+        return "PlayerDTO{" +
+                "money=" + money +
+                ", positionX=" + positionX +
+                ", positionY=" + positionY +
+                ", health=" + health +
+                '}';
+    }
 }
 
