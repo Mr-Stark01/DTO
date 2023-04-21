@@ -11,6 +11,7 @@ public class DTO implements Serializable {
     private Date dateOfCreation;
     private boolean checked;
     private int id;
+    private String name;
 
     public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id){
         this.unitDTOs=unitDTOs;
@@ -56,6 +57,14 @@ public class DTO implements Serializable {
         this.checked = checked;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "DTO{" +
@@ -65,6 +74,7 @@ public class DTO implements Serializable {
                 ", dateOfCreation=" + dateOfCreation +
                 ", checked=" + checked +
                 ", id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
