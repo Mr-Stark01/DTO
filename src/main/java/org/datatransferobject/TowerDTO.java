@@ -14,13 +14,15 @@ public class TowerDTO implements Serializable {
     protected float deltaSum;
     protected String towerClass;
 
-    public TowerDTO(float damage, int price, int range, UnitDTO target, float attackTime,long lastTimeOfAttack,int id,String towerClass) {
+    public TowerDTO(int X,int Y,float damage, int price, int range, UnitDTO target, float attackTime,float deltaSum,int id,String towerClass) {
+        this.X=X;
+        this.Y=Y;
         this.damage = damage;
         this.price = price;
         this.range = range;
         this.target = target;
         this.attackTime = attackTime;
-        this.lastTimeOfAttack = lastTimeOfAttack;
+        this.deltaSum = deltaSum;
         this.id = id;
         this.towerClass=towerClass;
     }
@@ -95,5 +97,22 @@ public class TowerDTO implements Serializable {
 
     public float getAttackTime() {
         return attackTime;
+    }
+
+    @Override
+    public String toString() {
+        return "TowerDTO{" +
+                "damage=" + damage +
+                ", price=" + price +
+                ", range=" + range +
+                ", target=" + target +
+                ", attackTime=" + attackTime +
+                ", X=" + X +
+                ", Y=" + Y +
+                ", lastTimeOfAttack=" + lastTimeOfAttack +
+                ", id=" + id +
+                ", deltaSum=" + deltaSum +
+                ", towerClass='" + towerClass + '\'' +
+                '}';
     }
 }

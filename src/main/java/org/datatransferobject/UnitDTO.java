@@ -22,7 +22,7 @@ public class UnitDTO implements Serializable {
     private List<Integer> nextYCoordinates;
 
     public UnitDTO(float speed, float health, float damage, int price, int previousX, int previousY, float deltaX, float deltaY, float distance, float x,
-                   float y, String unitClass,int id,List<Integer> nextXCoordinates,List<Integer> nextYCoordinates) {
+                   float y, String unitClass,int id,List<Integer> nextXCoordinates,List<Integer> nextYCoordinates,Long lastStep) {
         this.speed = speed;
         this.health = health;
         this.damage = damage;
@@ -38,6 +38,7 @@ public class UnitDTO implements Serializable {
         this.id=id;
         this.nextXCoordinates = nextXCoordinates;
         this.nextYCoordinates = nextYCoordinates;
+        this.lastStep = lastStep;
     }
 
     public long getLastStep() {
@@ -135,5 +136,27 @@ public class UnitDTO implements Serializable {
 
     public void setDeltaY(float deltaY) {
         this.deltaY = deltaY;
+    }
+
+    @Override
+    public String toString() {
+        return "UnitDTO{" +
+                "speed=" + speed +
+                ", health=" + health +
+                ", damage=" + damage +
+                ", price=" + price +
+                ", PreviousX=" + PreviousX +
+                ", PreviousY=" + PreviousY +
+                ", deltaX=" + deltaX +
+                ", deltaY=" + deltaY +
+                ", distance=" + distance +
+                ", X=" + X +
+                ", Y=" + Y +
+                ", unitClass='" + unitClass + '\'' +
+                ", id=" + id +
+                ", lastStep=" + lastStep +
+                ", nextXCoordinates=" + nextXCoordinates +
+                ", nextYCoordinates=" + nextYCoordinates +
+                '}';
     }
 }

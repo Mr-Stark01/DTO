@@ -11,13 +11,15 @@ public class DTO implements Serializable {
     private Date dateOfCreation;
     private boolean checked;
     private int id;
+    private String name;
 
-    public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id){
+    public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id,String name){
         this.unitDTOs=unitDTOs;
         this.towerDTOs=towerDTOs;
         this.playerDTO=playerDTO;
         this.id=id;
         dateOfCreation = new Date();
+        this.name=name;
     }
 
     public int getId() {
@@ -54,5 +56,26 @@ public class DTO implements Serializable {
 
     public void setChecked(boolean checked) {
         this.checked = checked;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "DTO{" +
+                "unitDTOs=" + unitDTOs +
+                ", towerDTOs=" + towerDTOs +
+                ", playerDTO=" + playerDTO +
+                ", dateOfCreation=" + dateOfCreation +
+                ", checked=" + checked +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
