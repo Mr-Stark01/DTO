@@ -12,6 +12,7 @@ public class DTO implements Serializable {
     private boolean checked;
     private int id;
     private String name;
+    protected String message;
 
     public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id,String name){
         this.unitDTOs=unitDTOs;
@@ -21,7 +22,15 @@ public class DTO implements Serializable {
         dateOfCreation = new Date();
         this.name=name;
     }
-
+    public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id,String name,String message){
+        this.unitDTOs=unitDTOs;
+        this.towerDTOs=towerDTOs;
+        this.playerDTO=playerDTO;
+        this.id=id;
+        dateOfCreation = new Date();
+        this.name=name;
+        this.message=message;
+    }
     public int getId() {
         return id;
     }
@@ -64,6 +73,14 @@ public class DTO implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     @Override
