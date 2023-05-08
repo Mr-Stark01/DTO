@@ -14,14 +14,6 @@ public class DTO implements Serializable {
     private String name;
     protected String message;
 
-    public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id,String name){
-        this.unitDTOs=unitDTOs;
-        this.towerDTOs=towerDTOs;
-        this.playerDTO=playerDTO;
-        this.id=id;
-        dateOfCreation = new Date();
-        this.name=name;
-    }
     public DTO(List<UnitDTO> unitDTOs, List<TowerDTO> towerDTOs, PlayerDTO playerDTO,int id,String name,String message){
         this.unitDTOs=unitDTOs;
         this.towerDTOs=towerDTOs;
