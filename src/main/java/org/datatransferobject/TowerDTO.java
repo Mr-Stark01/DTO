@@ -3,6 +3,7 @@ package org.datatransferobject;
 import java.io.Serializable;
 
 public class TowerDTO implements Serializable {
+    private static final long serialVersionUID = 6529612309826777120L;
     protected float damage;
     protected int price;
     protected int range;

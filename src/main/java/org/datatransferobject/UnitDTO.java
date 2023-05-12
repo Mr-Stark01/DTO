@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class UnitDTO implements Serializable {
+    private static final long serialVersionUID = 6529685098267757120L;
     private float speed;
     private float health;
     private float damage;

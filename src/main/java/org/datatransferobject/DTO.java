@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 public class DTO implements Serializable {
+    private static final long serialVersionUID = 6529685098267757690L;
     private List<UnitDTO> unitDTOs;
     private List<TowerDTO> towerDTOs;
     private PlayerDTO playerDTO;
